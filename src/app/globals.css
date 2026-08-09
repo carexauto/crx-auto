@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Provisional brand palette — refine against the final logo asset.
+     Stored as space-separated RGB channels so Tailwind can apply opacity
+     modifiers (e.g. bg-brand-black/95) via rgb(var(--x) / <alpha-value>). */
+  --brand-red: 245 54 56; /* #f53638 */
+  --brand-yellow: 255 184 23; /* #ffb817 */
+  --brand-black: 17 23 25; /* #111719 */
+  --surface: 246 247 248; /* #f6f7f8 */
+  --muted: 104 112 120; /* #687078 */
+  --border: 223 227 230; /* #dfe3e6 */
+  --success: 8 127 91; /* #087f5b */
+  --error: 180 35 24; /* #b42318 */
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Offset anchor targets so the sticky header doesn't cover them. */
+    scroll-padding-top: 5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+
+  body {
+    background-color: #ffffff;
+    color: rgb(var(--brand-black));
+    font-family: var(--font-body), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-heading), system-ui, sans-serif;
+    text-wrap: balance;
+  }
+
+  /* Visible, on-brand focus ring for keyboard users. */
+  :focus-visible {
+    outline: 2px solid rgb(var(--brand-black));
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .container-px {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-left: max(1.25rem, env(safe-area-inset-left));
+    padding-right: max(1.25rem, env(safe-area-inset-right));
+  }
+}
