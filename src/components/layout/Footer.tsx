@@ -13,7 +13,7 @@ export function Footer() {
             <Logo variant="full" onDark />
             <p className="mt-3 max-w-xs text-sm text-white/70">
               Nationwide and international vehicle transportation and dispatch
-              coordination.
+              coordinationn.
             </p>
           </div>
 
