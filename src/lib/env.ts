@@ -15,9 +15,10 @@ export const serverEnv = {
   web3formsKey: optional("WEB3FORMS_ACCESS_KEY"),
   // Resend (optional upgrade for domain-verified sending).
   resendApiKey: optional("RESEND_API_KEY"),
-  quoteToEmail: optional("QUOTE_TO_EMAIL") ?? "info@crx.ge",
+  quoteToEmail: optional("QUOTE_TO_EMAIL") ?? "info@carextransport.com",
   quoteFromEmail:
-    optional("QUOTE_FROM_EMAIL") ?? "Carex Auto Quotes <quotes@crx.ge>",
+    optional("QUOTE_FROM_EMAIL") ??
+    "Carex Auto Quotes <quotes@carextransport.com>",
   turnstileSecret: optional("TURNSTILE_SECRET_KEY"),
 };
 

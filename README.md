@@ -2,7 +2,7 @@
 
 A fast, responsive, single-page site for **Carex Auto** (vehicle hauling,
 dispatch, brokerage, and transport). The primary conversion is a three-step
-**quote request** form that emails the request to `info@crx.ge`. It does not
+**quote request** form that emails the request to `info@carextransport.com`. It does not
 calculate or display a price.
 
 ## Tech stack
@@ -46,8 +46,8 @@ copy .env.example .env.local
 | Variable                | Purpose                                                   |
 | ----------------------- | --------------------------------------------------------- |
 | `RESEND_API_KEY`        | Resend API key (server only — never exposed to browser)   |
-| `QUOTE_TO_EMAIL`        | Where leads are delivered (`info@crx.ge`)                 |
-| `QUOTE_FROM_EMAIL`      | Verified sender, e.g. `Carex Auto Quotes <quotes@crx.ge>` |
+| `QUOTE_TO_EMAIL`        | Where leads are delivered (`info@carextransport.com`)             |
+| `QUOTE_FROM_EMAIL`      | Verified sender, e.g. `Carex Auto Quotes <quotes@carextransport.com>` |
 | `NEXT_PUBLIC_SITE_URL`  | Canonical/site URL for metadata, sitemap, robots          |
 | `TURNSTILE_SECRET_KEY`  | (optional) Cloudflare Turnstile — add before public promo |
 
@@ -64,9 +64,9 @@ npm run typecheck  # tsc --noEmit
 ## Email delivery (Resend)
 
 1. Create a Resend account and API key.
-2. Verify the `crx.ge` domain in Resend by adding the required DNS records.
+2. Verify the `carextransport.com` domain in Resend by adding the required DNS records.
 3. Set the three `QUOTE_*` env vars above (in Vercel too).
-4. Submit a real test request and confirm it arrives at `info@crx.ge` with
+4. Submit a real test request and confirm it arrives at `info@carextransport.com` with
    reply-to set to the customer's email.
 
 **Fallback:** if DNS verification can't be completed in time, point the

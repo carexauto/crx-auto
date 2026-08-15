@@ -79,7 +79,8 @@ export function Footer() {
         </div>
 
         <div className="mt-10 border-t border-white/10 pt-6 text-xs text-white/50">
-          <p>
+          <p>{business.legalNote}</p>
+          <p className="mt-1">
             &copy; {year} {business.name}. All rights reserved.
           </p>
         </div>

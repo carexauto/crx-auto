@@ -11,19 +11,20 @@ export const business = {
   name: "Carex Auto",
   yearsExperience: 5,
   foundedYear: new Date().getFullYear() - 5,
-  email: "info@crx.ge",
+  email: "info@carextransport.com",
   phones: {
-    primary: { display: "302-333-6571", href: "tel:+13023336571" },
-    secondary: { display: "424-518-1326", href: "tel:+14245181326" },
+    primary: { display: "424-518-1326", href: "tel:+14245181326" },
+    secondary: { display: "302-333-6571", href: "tel:+13023336571" },
   },
   address: {
     line1: "39C Chambers Brg Rd",
     city: "Lakewood",
     state: "NJ",
     postalCode: "08701",
-    country: "United States",
-    full: "39C Chambers Brg Rd, Lakewood, NJ 08701, United States",
+    full: "39C Chambers Brg Rd, Lakewood, NJ 08701",
   },
+  // Legal disclosure shown in the footer.
+  legalNote: "Carex Transport is a trade name of Carex Auto LLC.",
 } as const;
 
 export const nav = [

@@ -12,7 +12,7 @@ const transportLabel = { open: "Open", enclosed: "Enclosed", unsure: "Not sure" 
  * Deliver the lead via Web3Forms (no DNS required). We POST server-side so the
  * access key stays out of the browser and our validation/sanitization still
  * runs first. Web3Forms emails the submission to the address tied to the key
- * (set that to info@crx.ge when creating the key).
+ * (set that to info@carextransport.com when creating the key).
  */
 export async function sendQuoteViaWeb3Forms(
   req: QuoteRequest,
