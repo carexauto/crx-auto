@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Phone } from "lucide-react";
 import { business, hero } from "@/content/site";
 import { QuoteForm } from "@/components/quote/QuoteForm";
@@ -8,10 +9,20 @@ export function Hero() {
       id="top"
       className="relative overflow-hidden bg-brand-black pt-24 pb-14 text-white sm:pt-28"
     >
-      {/* Layered brand gradient stands in for the licensed hero photo until one
-          is added. See ASSET-SOURCES.md. */}
+      {/* Licensed hero photo (Pexels #34539243). Dark overlays keep the white
+          hero text at accessible contrast. See ASSET-SOURCES.md. */}
       <div aria-hidden className="pointer-events-none absolute inset-0">
-        <div className="absolute inset-0 bg-[radial-gradient(1200px_500px_at_80%_-10%,rgba(255,184,23,0.16),transparent),radial-gradient(900px_500px_at_0%_20%,rgba(245,54,56,0.14),transparent)]" />
+        <Image
+          src="/images/hero-car-hauler.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        {/* Darken toward the left where the copy sits for readability. */}
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-black/95 via-brand-black/80 to-brand-black/45" />
+        <div className="absolute inset-0 bg-[radial-gradient(1000px_460px_at_82%_-10%,rgba(255,184,23,0.14),transparent)]" />
         <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-brand-black to-transparent" />
       </div>
 
