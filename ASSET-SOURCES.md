@@ -16,8 +16,9 @@ stock provider), save the files locally under `public/`, and record them below.
 
 ### Remaining (optional) logo polish
 
-- The favicon/app icon at `src/app/icon.svg` is still a placeholder. Generate
-  favicon/app-icon files from `carex-auto-logo.png` to replace it.
+- The favicon (`src/app/icon.png`) and Apple touch icon (`src/app/apple-icon.png`)
+  are generated from `carex-auto-logo.png`. Next.js auto-links them; no manual
+  `<link>` tags are required.
 - If a compact single-color variant is ever needed for tiny surfaces, add
   `public/brand/carex-auto-mark.png`.
 
