@@ -7,24 +7,19 @@ stock provider), save the files locally under `public/`, and record them below.
 
 ## Brand logo (owner-supplied)
 
-- Source: `https://my.crx.ge/engbk.png` (company-owned)
+- File: `public/brand/carex-auto-logo.png` (owner-supplied, 500×500 transparent PNG)
+- Original source: `logo_transparent_crx.png` provided by the owner; also at `https://my.crx.ge/engbk.png` (company-owned)
 - License: Owned by Carex Auto.
-- Status: **NOT yet added to the repo.** The build environment used to author
-  this project could not download binary files. Until the real logo is added,
-  the site renders a text-based wordmark fallback (`src/components/layout/Logo.tsx`).
+- Status: **Added and in use.** The red/amber "X" mark is rendered via
+  `next/image` in `src/components/layout/Logo.tsx`, beside the two-line
+  "CAREX AUTO TRANSPORT / Licensed U.S. Auto Dealer" wordmark.
 
-### To finish the logo work
+### Remaining (optional) logo polish
 
-1. Download `https://my.crx.ge/engbk.png`.
-2. Produce and place:
-   - `public/brand/carex-auto-logo.png` — cleaned transparent background, tightly cropped.
-   - `public/brand/carex-auto-mark.png` — compact red/yellow mark for small surfaces.
-3. Swap the text fallback in `Logo.tsx` for a `next/image` using those files.
-4. If background removal damages the mark/wordmark, request a transparent
-   SVG/PNG from the owner instead of publishing a rough result.
-
-A temporary SVG app icon lives at `src/app/icon.svg` (used for the favicon).
-Replace it once the real brand mark is available.
+- The favicon/app icon at `src/app/icon.svg` is still a placeholder. Generate
+  favicon/app-icon files from `carex-auto-logo.png` to replace it.
+- If a compact single-color variant is ever needed for tiny surfaces, add
+  `public/brand/carex-auto-mark.png`.
 
 ## Photography (to add before launch)
 
